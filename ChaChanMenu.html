@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChaChanMenu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 </head>
-<link type="text/css" rel="stylesheet" href="style.css">
+<link type="text/css" rel="stylesheet" href="style2.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
 <style>
 /*header {
     background-color: transparent;
 }*/
+
+
 .toast{
     float: left;
 
 
     position: absolute; top:250px; left:350px;
-      }
+}
 /*width:650px; float: right;}
 
 #clear {clear:both }*/
 </style>
+
 <body>
     <header>
         <p>
@@ -34,11 +37,41 @@
         </nav>
         <p></p>
     </header>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p><img src="img/pg3.png" alt="">
+    <!--<p><img src="img/pg3.png" alt="">
     </p>
-    <span class="toast"> <img src="img/menu_toast.png"></span>
+    <span class="toast"> <img src="img/menu_toast.png"></span>-->
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+    <p> <img src="img/pg3.png" alt="" width="100%">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/menu_toast.png"> </div>
+            <div class="swiper-slide"><img src="img/menu_bun.png"></div>
+            <div class="swiper-slide"><img src="img/menu_nuddle.png"></div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    </p>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+    rewind: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+},
+    });
+</script>
+
 
 </body>
 </html>
