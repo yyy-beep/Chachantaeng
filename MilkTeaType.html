@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+    
+    body {
+        background: url(img/pg3.png) no-repeat;
+        background-color: #352e2e;
+}
+
+@font-face {
+    font-family: 'SANJUGotgam';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/SANJUGotgam.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HealthsetGothicLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.0/HealthsetGothicLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* 노말라이즈 */
+body, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, p, figure {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+h1, h2, h3, h4, strong, th {
+    font-weight:normal;
+    font-family:inherit;
+    color:inherit;
+}
+
+a {
+    color:inherit;
+    text-decoration:none;
+}
+
+
+.main-slider {
+    font-size:0;
+    position:relative;
+    width:100%;
+    height:500px;
+}
+
+.main-slider .slick-list,
+.main-slider .slick-track {
+    height:100%;
+}
+
+.main-slider .slick-slide {
+    position:relative;
+}
+
+.item {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+.item-1 {
+    background-color:rgb(44, 43, 43);
+    background: url(img/KakaoTalk_20230615_000459716.png) no-repeat 1100px;
+}
+
+.item-2 {
+    background: url(img/CHCH2.png) no-repeat 1100px;
+}
+
+.item-3 {
+    background-color:green;
+    background: url(img/CHCH3.png) no-repeat 1100px;
+}
+
+
+.inner-text {
+    width: 300px;
+    height: 200px;
+    margin: 20px 0 0 20px;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.inner-text::-webkit-scrollbar {
+    width: 8px;
+}
+
+/*
+.inner-text::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.5);
+}*/
+
+
+.inner-text p {
+    font-size: 15px;
+    color: #fff;
+}
+
+.inner-slider {
+    margin: 50px;
+    width:400px;
+    position:relative;
+    z-index:1000;
+}
+
+
+div{
+    background-color: #7c644100;
+        height: 300px;
+}
+
+    .sa {
+        opacity: 0;
+        transition: all .5s ease;
+    }
+
+    .sa-up {
+        transform: translate(0, 100px);
+    }
+
+
+    
+    .sa.show {
+        opacity: 1;
+        transform: none;
+    }
+
+    header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 52px;
+    padding: 1rem;
+    background-color:rgb(141, 13, 13);
+
+    background-blend-mode: difference;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+}
+
+.menuu{
+    margin-left: 0vw;
+}
+
+span {
+    margin-right: 9vh;
+}
+
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 15px;
+    font-family: 'SANJUGotgam';
+}
+
+
+
+a:hover:not(.markani) {
+display: inline-block;
+color: brown;
+background-color: rgb(0, 0, 0);
+transform: translateY(-2px);
+transition: 0.5s;
+margin: 10px;
+}
+
+</style></head>
+<header>
+
+    <a href="index.html" class="markani"> <img src="img/mark.png" alt="" width="120px"> </a>
+    <nav>
+        <span class="menuu"> <a href="index.html"> 메인 </a> </span>
+        <span> <a href="whatisCHACHAN.html">차찬탱의 시작</a> </span>
+        <span> <a href="MilkTeaType.html" style="text-decoration-line: underline;
+            text-decoration-thickness: 0.3px; text-underline-offset : 10px;"> 밀크티 종류 </a> </span>
+        <span> <a href="ChaChanMenu.html"> 대표 메뉴 </a> </span>
+    </nav>
+    <p> </p>
+</header>
+<body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+
+<section class="main-slider" style="margin-top:200px;">
+    <div class="item item-1 sa sa-down" >
+        <div class="inner-text sa sa-up" style="margin: 85px 420px; width: 600px; height: 400px;">
+            <p style="font-family: 'SANJUGotgam'; font-size: 32px;">영국식 밀크티</p>
+            <p style="font-family: 'HealthsetGothicLight'; font-size: 22px;">
+                <br><br>영국에서 처음 만들어지고 발전된 홍차의 음용법이다.<br><br> 섭씨 60도 정도로 데운 우유에 홍차를 섞고,<br>
+                기호에 따라 각설탕처럼 단맛이 나는 첨가제를 넣어 마신다.<br><br> 
+                
+                보통 밀크티를 만들 때 홍차를 진하게 우려야 한다는 인식이 <br> 보편적인데,
+                정통 영국식 밀크티는 홍차를 일부러 <br>진하게 우리지 않는 것이 특징이다.<br><br>
+                
+                아무것도 섞지 않은 홍차를 '스트레이트 티' 라고 하는데,<br>
+                밀크티는 스트레이트 티를 연하게 마시기 위해 개발된 음용법이기 때문이다.<br>
+                때문에 특유의 밍밍한 맛으로 호불호가 갈리기도 한다.
+        </div>
+    </div>
+    <div class="item item-2">
+        <div class="inner-text sa sa-up" style="margin: 100px 430px; width: 600px; height: 400px;">
+            <p style="font-family: 'SANJUGotgam'; font-size: 32px;">대만식 밀크티</p>
+            <p style="font-family: 'HealthsetGothicLight'; font-size: 22px;">
+                <br><br>영국식 밀크티의 변형<br><br>영국식 밀크티와 달리 진하게 우린 홍차에 우유 대신<br> 무가당 연유를 넣어서 만든다. 
+                <Br><br> 영국식 밀크티에 비해 단맛이 강해 연유 때문이라고 <br> 생각하는 경우가 많은데,
+                연유는 밀크티의 농도를 맞추기 <br> 위해서 넣는 것이며, 단맛은 모두 설탕으로 낸다.
+                <br><br>타피오카 펄을 더해 <br> 쫀득한 식감으로 인기가 많다.</p>
+        </div>
+    </div>
+    <div class="item item-3" >
+        <div class="inner-text sa sa-up" style="margin: 100px 420px; width: 600px; height: 400px;">
+            <p style="font-family: 'SANJUGotgam'; font-size: 32px;">홍콩식 밀크티</p>
+            <p style="font-family: 'HealthsetGothicLight'; font-size: 22px;">
+                <br><br>1800년도 후반 영국의 식민지 시절부터 유래되었다.
+                <br><br>
+                진하게 우린 홍차에 일반 우유보다<br>
+                수분함량이 낮은 무가당 연유와 혼합한 뒤,
+                기호에 따라 설탕 1-2 스푼을 첨가하여 마신다.
+                <br><br>
+                홍차의 진한 향과 진한 풍미를 느낄 수 있으며<br>
+                약간 쌉싸름하며 달콤한 맛이 특징이다.<br>
+                <br>아이스 밀크티의 경우, 유리병에 담겨 <br>아이스 버켓과 함께 제공된다. 
+        </div>
+    </div>
+</section>
+
+</body>
+<footer style="background-color: rgba(0, 0, 0, 0.274); 
+padding: 0%; color: rgba(240, 248, 255, 0.253); 
+align-content: end;
+font-size: small;
+font-family: 'HealthsetGothicLight';
+margin-top: 8.5%;">
+    <p style="text-align: right; margin-top: 0;"> © 2023. 박연지 all rights reserved.  <br>
+    &#8249;park615111@naver.com&#8250; <p>
+        <p style="text-align: right;"> 본 사이트는 울산대학교 디지털디자인학전공 2023년도 과제용으로 제작되었습니다.</p>
+        <br>
+</footer>
+<script>
+    var mainSlider = $('.main-slider');
+var innerText = $('.inner-text');
+
+mainSlider.slick({
+    slidesToShow: 1,
+    dots: true,
+});
+
+mainSlider.on('wheel', function(e) {
+  e.preventDefault();
+
+  if (e.originalEvent.deltaY < 0) {
+    $(this).slick('slickPrev');
+  } else {
+    $(this).slick('slickNext');
+  }
+});
+
+innerText.on('wheel', function(e) {
+    e.stopPropagation();
+})
+
+     const saTriggerMargin = 300;
+      const saElementList = document.querySelectorAll('.sa');
+
+      const saFunc = function() {
+        for (const element of saElementList) {
+          if (!element.classList.contains('show')) {
+            if (window.innerHeight > element.getBoundingClientRect().top + saTriggerMargin) {
+              element.classList.add('show');
+            }
+          }
+        }
+      }
+
+      window.addEventListener('load', saFunc);
+      window.addEventListener('scroll', saFunc);
+</script>
+</html>
